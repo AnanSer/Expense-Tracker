@@ -5,21 +5,21 @@ function App() {
   const expenses = [
     {
       id: "e1",
-      title: "Ekub",
+      title: "Office Rent",
       amount: 93.22,
-      date: new Date(2020, 7, 14),
+      date: new Date(2024, 3, 14),
     },
     {
       id: "e2",
-      title: "Eder",
+      title: "School ",
       amount: 993.22,
-      date: new Date(2023, 7, 14),
+      date: new Date(2022, 7, 14),
     },
     {
       id: "e3",
-      title: "Teskar",
+      title: "Graduation",
       amount: 103.22,
-      date: new Date(2024, 7, 14),
+      date: new Date(2024, 6, 13),
     },
   ];
 

@@ -4,6 +4,9 @@
   width: 5.5rem;
   height: 5.5rem;
 
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  background-color: #222;
+  border: 1px solid #fff;
   color: white;
   border-radius: 12px;
   align-items: center;

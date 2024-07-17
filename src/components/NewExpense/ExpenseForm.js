@@ -3,7 +3,7 @@ import "./ExpenseForm.css";
 const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
-  const [enterdDate, setEnteredDate] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
   /*
   const [userInput, setUserInput] = useState({
     enteredTitle: "",
@@ -31,7 +31,7 @@ const ExpenseForm = () => {
     // });
   };
 
-  const dateChangeTracker = (event) => {
+  const dateChangeHandler = (event) => {
     setEnteredDate(event.targer.value);
     // another way
     // setUserInput({ ...userInput, enteredDate: event.target.value });
@@ -40,8 +40,20 @@ const ExpenseForm = () => {
     // });
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+
+    console.log(expenseData);
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -62,9 +74,9 @@ const ExpenseForm = () => {
           <label>Date</label>
           <input
             type="date"
-            min="2020"
-            step="2024-02-02"
-            onChange={dateChangeTracker}
+            min="2019-01-01"
+            max="2024-02-02"
+            onChange={dateChangeHandler}
           />
         </div>
       </div>

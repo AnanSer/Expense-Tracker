@@ -7,19 +7,19 @@ const DUMMY_EXPENSESS = [
   {
     id: "e1",
     title: "Office Rent",
-    amount: "28,000 birr",
+    amount: "28,000 ",
     date: new Date(2024, 3, 14),
   },
   {
     id: "e2",
     title: "School ",
-    amount: "12,000 birr",
+    amount: "12,000 ",
     date: new Date(2022, 7, 14),
   },
   {
     id: "e3",
     title: "Graduation",
-    amount: "10,000 birr",
+    amount: "10,000 ",
     date: new Date(2024, 6, 13),
   },
 ];

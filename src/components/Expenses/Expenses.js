@@ -15,11 +15,11 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
-  const expenseContent = <p>No expenses found.</p>;
+  let expenseContent = <p>No expenses found.</p>;
 
   {
-    if (filteredExpenses.length > 0)
-      filteredExpenses.map((expense) => (
+    if (filteredExpenses.length > 0) {
+      expenseContent = filteredExpenses.map((expense) => (
         //when we do write in dynamic way
         <ExpenseItem
           key={expense.id}
@@ -28,6 +28,7 @@ const Expenses = (props) => {
           date={expense.date}
         />
       ));
+    }
   }
 
   return (
@@ -37,6 +38,8 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+
+        {expenseContent}
 
         {/*         
         <ExpenseItem            // these are static way 

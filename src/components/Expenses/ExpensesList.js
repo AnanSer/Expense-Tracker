@@ -11,7 +11,7 @@ const ExpensesList = (props) => {
   }
 
   return (
-    <ul className="expenses-list">
+    <li className="expenses-list">
       {props.items.map((expense) => (
         //when we do write in dynamic way
         <ExpenseItem
@@ -21,7 +21,7 @@ const ExpensesList = (props) => {
           date={expense.date}
         />
       ))}
-    </ul>
+    </li>
   );
 };
 
